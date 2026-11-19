@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Заявка — SAFAR TJ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="container topbar">
+  <a class="logo" href="index.html">SAFAR <span>TJ</span></a>
+  <nav aria-label="Главное меню">
+   <a href="index.html">Главная</a>
+   <a href="tours.html">Туры</a>
+   <a href="index.html#about">О проекте</a>
+  </nav>
+  <a class="button small" href="booking.html">Заявка на тур</a>
+ </div>
+</header>
+<main class="container section">
+ <a href="tours.html" class="back">← Вернуться к турам</a>
+ <div class="page-heading"><h1>Заявка на тур</h1><p>Заполните поля ниже, чтобы посмотреть, как работает форма.</p></div>
+ <div class="form-layout"><form id="bookingForm" class="form-box">
+  <h2>Контактные данные</h2>
+  <label for="name">Фамилия и имя *</label><input id="name" name="name" placeholder="Например: Саидов Фирдавс" required minlength="3">
+  <label for="phone">Номер телефона *</label><input id="phone" name="phone" type="tel" placeholder="+992 ..." required minlength="7">
+  <label for="selectedTour">Выберите тур *</label><select id="selectedTour" name="tour" required>
+   <option value="iskanderkul">Озеро Искандеркуль</option><option value="haftkul">Семь озёр</option><option value="pamir">Памир</option><option value="khujand">Худжанд</option><option value="fann">Фанские горы</option><option value="dushanbe">Душанбе</option>
+  </select>
+  <div class="two-fields"><div><label for="date">Дата поездки *</label><input id="date" name="date" type="date" required></div><div><label for="people">Количество людей</label><select id="people" name="people"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></div></div>
+  <label for="message">Комментарий</label><textarea id="message" name="message" rows="3" placeholder="Что хотите узнать?"></textarea>
+  <label class="agree"><input type="checkbox" id="agree" required> Я понимаю, что это учебная форма и данные не отправляются</label>
+  <p id="formMsg" class="error-text" aria-live="polite"></p>
+  <button class="button full" type="submit">Отправить заявку</button>
+ </form>
+ <aside class="info-box"><h2>Информация</h2><p>Форма сделана для проверки дизайна сайта. В учебном проекте пока нет базы данных и отправки заявок.</p><p class="minor">Поля со звёздочкой обязательны для заполнения.</p></aside></div>
+</main>
+<div class="modal" id="modal" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><h2 id="modalTitle">Заявка заполнена!</h2><p>Спасибо! Это демонстрация работы формы. Данные никуда не отправлены.</p><button class="button" id="closeModal" type="button">Понятно</button></div></div>
+<footer><div class="container footer-line">
+  <span>SAFAR TJ — учебный проект о турах по Таджикистану</span>
+  <span>2026</span>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

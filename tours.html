@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Туры — SAFAR TJ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+ <div class="container topbar">
+  <a class="logo" href="index.html">SAFAR <span>TJ</span></a>
+  <nav aria-label="Главное меню">
+   <a href="index.html">Главная</a>
+   <a href="tours.html">Туры</a>
+   <a href="index.html#about">О проекте</a>
+  </nav>
+  <a class="button small" href="booking.html">Заявка на тур</a>
+ </div>
+</header>
+<main class="container section">
+ <div class="page-heading"><h1>Туры по Таджикистану</h1><p>Можно выбрать направление или найти нужное место.</p></div>
+ <div class="filter-row">
+  <div><label for="search">Поиск тура</label><input type="search" id="search" placeholder="Например: Памир"></div>
+  <div><label for="region">Регион</label><select id="region"><option value="">Все регионы</option><option value="Согдийская область">Согдийская область</option><option value="ГБАО">ГБАО</option><option value="Душанбе">Душанбе</option></select></div>
+  <button class="button outline" id="reset" type="button">Сбросить</button>
+ </div>
+ <p id="resultCount" class="minor">6 туров</p>
+ <div class="cards" id="tourCards">
+  <article class="card" data-name="Искандеркуль" data-region="Согдийская область"><img src="imags/iskanderkul.svg" alt="Искандеркуль"><div class="card-body"><span class="minor">Согдийская область · 3 дня</span><h3>Озеро Искандеркуль</h3><p>Природа и отдых возле озера.</p><div class="card-bottom"><b>950 сомони</b><a href="tour.html?tour=iskanderkul">Подробнее</a></div></div></article>
+  <article class="card" data-name="Семь озёр" data-region="Согдийская область"><img src="imags/haftkul.svg" alt="Семь озёр"><div class="card-body"><span class="minor">Согдийская область · 4 дня</span><h3>Семь озёр</h3><p>Поездка к горным озёрам.</p><div class="card-bottom"><b>1390 сомони</b><a href="tour.html?tour=haftkul">Подробнее</a></div></div></article>
+  <article class="card" data-name="Памир" data-region="ГБАО"><img src="imags/pamir.svg" alt="Памир"><div class="card-body"><span class="minor">ГБАО · 7 дней</span><h3>Памир</h3><p>Горные дороги и красивые пейзажи.</p><div class="card-bottom"><b>3250 сомони</b><a href="tour.html?tour=pamir">Подробнее</a></div></div></article>
+  <article class="card" data-name="Худжанд" data-region="Согдийская область"><img src="imags/khujand.svg" alt="Худжанд"><div class="card-body"><span class="minor">Согдийская область · 2 дня</span><h3>Прогулка по Худжанду</h3><p>Интересные места и история города.</p><div class="card-bottom"><b>690 сомони</b><a href="tour.html?tour=khujand">Подробнее</a></div></div></article>
+  <article class="card" data-name="Фанские горы" data-region="Согдийская область"><img src="imags/fann.svg" alt="Фанские горы"><div class="card-body"><span class="minor">Согдийская область · 5 дней</span><h3>Фанские горы</h3><p>Прогулка и отдых в горах.</p><div class="card-bottom"><b>2190 сомони</b><a href="tour.html?tour=fann">Подробнее</a></div></div></article>
+  <article class="card" data-name="Душанбе" data-region="Душанбе"><img src="imags/dushanbe.svg" alt="Душанбе"><div class="card-body"><span class="minor">Душанбе · 2 дня</span><h3>Экскурсия в Душанбе</h3><p>Парки, площадь и музеи столицы.</p><div class="card-bottom"><b>730 сомони</b><a href="tour.html?tour=dushanbe">Подробнее</a></div></div></article>
+ </div>
+ <p id="noTours" class="notice" hidden>Таких туров пока нет. Попробуйте другой запрос.</p>
+</main>
+<footer><div class="container footer-line">
+  <span>SAFAR TJ — учебный проект о турах по Таджикистану</span>
+  <span>2026</span>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
